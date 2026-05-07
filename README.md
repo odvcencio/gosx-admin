@@ -2,6 +2,10 @@
 
 GoSX Admin is the generic admin framework layer for the GoSX ecosystem.
 
+## Agent Skill
+
+Agents helping someone use GoSX Admin should read the GoSX ecosystem skill: [using-gosx-ecosystem](https://github.com/odvcencio/m31labs-skills/blob/main/skills/using-gosx-ecosystem/SKILL.md).
+
 It owns reusable admin primitives: resource registries, generated surfaces,
 server-action form wiring, and block-editor infrastructure. It should not know
 about blog posts, products, or a specific CMS schema.
