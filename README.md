@@ -20,6 +20,8 @@ Current package surface:
   form view models, and an embedded browser runtime for block lists.
 - `workbench`: generic admin resource, field, action, tool, and workspace
   descriptors with map view models for GoSX admin shells.
+- `calendar`: generic scheduling/event primitives and month-grid view models
+  for internal admin widgets.
 
 ```sh
 go get github.com/odvcencio/gosx-admin
