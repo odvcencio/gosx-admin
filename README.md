@@ -22,7 +22,8 @@ Current package surface:
 - `workbench`: generic admin resource, field, action, tool, and workspace
   descriptors with map view models for GoSX admin shells.
 - `calendar`: generic scheduling/event/resource/registration primitives,
-  capacity helpers, month-grid view models, and rendered GoSX admin widgets.
+  capacity helpers, month-grid view models, rendered GoSX admin widgets, and
+  a memory-backed scheduling store for early sites and tests.
 
 ```sh
 go get github.com/odvcencio/gosx-admin
