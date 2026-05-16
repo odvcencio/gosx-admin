@@ -18,7 +18,9 @@ Current package surface:
 
 - `blockstudio`: sortable block definitions, persisted order normalization,
   form view models, and an embedded browser runtime for block lists.
+- `workbench`: generic admin resource, field, action, tool, and workspace
+  descriptors with map view models for GoSX admin shells.
 
 ```sh
-go get github.com/odvcencio/gosx-admin/blockstudio
+go get github.com/odvcencio/gosx-admin
 ```
