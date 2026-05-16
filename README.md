@@ -17,7 +17,8 @@ bridges only where an interaction needs them.
 Current package surface:
 
 - `blockstudio`: sortable block definitions, persisted order normalization,
-  form view models, and an embedded browser runtime for block lists.
+  form view models, generated inspector controls, and an embedded browser
+  runtime for block lists.
 - `workbench`: generic admin resource, field, action, tool, and workspace
   descriptors with map view models for GoSX admin shells.
 - `calendar`: generic scheduling/event primitives and month-grid view models
