@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+	"strings"
 	"sync"
 )
 
@@ -28,6 +29,7 @@ func NewFileScheduleStore(path string, seed MemorySeed) (*FileScheduleStore, err
 }
 
 func OpenFileScheduleStore(path string) (*FileScheduleStore, error) {
+	path = strings.TrimSpace(path)
 	if path == "" {
 		return nil, fmt.Errorf("calendar schedule path is required")
 	}
@@ -46,6 +48,7 @@ func OpenFileScheduleStore(path string) (*FileScheduleStore, error) {
 }
 
 func newFileScheduleStore(path string, seed MemorySeed) (*FileScheduleStore, error) {
+	path = strings.TrimSpace(path)
 	if path == "" {
 		return nil, fmt.Errorf("calendar schedule path is required")
 	}

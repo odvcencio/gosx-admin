@@ -99,7 +99,7 @@ func TestFileScheduleStoreEmptyPathError(t *testing.T) {
 	if _, err := OpenFileScheduleStore(""); err == nil {
 		t.Fatal("expected open empty path error")
 	}
-	if _, err := NewFileScheduleStore("", MemorySeed{}); err == nil {
+	if _, err := NewFileScheduleStore("   ", MemorySeed{}); err == nil {
 		t.Fatal("expected new empty path error")
 	}
 }
