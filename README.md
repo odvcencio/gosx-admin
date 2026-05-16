@@ -21,8 +21,8 @@ Current package surface:
   runtime for block lists.
 - `workbench`: generic admin resource, field, action, tool, and workspace
   descriptors with map view models for GoSX admin shells.
-- `calendar`: generic scheduling/event primitives, month-grid view models,
-  and rendered GoSX admin widgets.
+- `calendar`: generic scheduling/event/resource/registration primitives,
+  capacity helpers, month-grid view models, and rendered GoSX admin widgets.
 
 ```sh
 go get github.com/odvcencio/gosx-admin
