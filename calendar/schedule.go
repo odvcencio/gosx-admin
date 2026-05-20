@@ -69,6 +69,12 @@ type Availability struct {
 	Label       string
 }
 
+type CapacitySummary struct {
+	FullEvents    int
+	TotalCapacity int
+	Registered    int
+}
+
 func NormalizeResource(resource Resource) (Resource, bool) {
 	resource.ID = strings.TrimSpace(resource.ID)
 	resource.Kind = strings.TrimSpace(resource.Kind)
@@ -228,6 +234,18 @@ func EventAvailability(event Event) Availability {
 		availability.Label += " full"
 	}
 	return availability
+}
+
+func SummarizeCapacity(events []Event) CapacitySummary {
+	summary := CapacitySummary{}
+	for _, event := range NormalizeEvents(events) {
+		summary.TotalCapacity += event.Capacity
+		summary.Registered += event.Registered
+		if EventAvailability(event).Full {
+			summary.FullEvents++
+		}
+	}
+	return summary
 }
 
 func CountableRegistration(status RegistrationStatus) bool {

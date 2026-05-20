@@ -77,6 +77,10 @@ func TestApplyRegistrationCountsAndAvailability(t *testing.T) {
 	if !availability.Full || availability.Remaining != 0 || availability.Label != "3/3 full" {
 		t.Fatalf("unexpected availability: %#v", availability)
 	}
+	summary := SummarizeCapacity(got)
+	if summary.FullEvents != 1 || summary.TotalCapacity != 9 || summary.Registered != 3 {
+		t.Fatalf("unexpected capacity summary: %#v", summary)
+	}
 }
 
 func TestEventAvailabilityWithoutCapacity(t *testing.T) {
