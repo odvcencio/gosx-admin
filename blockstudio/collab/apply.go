@@ -4,7 +4,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/odvcencio/gosx-admin/blockstudio"
+	"m31labs.dev/gosx-admin/blockstudio"
 )
 
 func Apply(doc blockstudio.Document, operations []Operation) (Result, error) {

@@ -3,7 +3,7 @@ package collab
 import (
 	"strings"
 
-	"github.com/odvcencio/gosx-admin/blockstudio"
+	"m31labs.dev/gosx-admin/blockstudio"
 )
 
 func InvertTransaction(before blockstudio.Document, tx Transaction) []Operation {

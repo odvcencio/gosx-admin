@@ -3,7 +3,7 @@ package blockstudio
 import (
 	"strings"
 
-	"github.com/odvcencio/gosx"
+	"m31labs.dev/gosx"
 )
 
 type InspectorOptions struct {

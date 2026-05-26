@@ -4,7 +4,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/odvcencio/gosx-admin/blockstudio"
+	"m31labs.dev/gosx-admin/blockstudio"
 )
 
 func TestReviewTransactionSummarizesHumanEdits(t *testing.T) {

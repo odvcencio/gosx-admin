@@ -3,7 +3,7 @@ package collab
 import (
 	"fmt"
 
-	"github.com/odvcencio/gosx-admin/blockstudio"
+	"m31labs.dev/gosx-admin/blockstudio"
 )
 
 func cloneDocument(doc blockstudio.Document) blockstudio.Document {

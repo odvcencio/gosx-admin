@@ -6,7 +6,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/odvcencio/gosx-admin/blockstudio"
+	"m31labs.dev/gosx-admin/blockstudio"
 )
 
 type ActorKind string

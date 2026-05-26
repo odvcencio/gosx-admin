@@ -5,7 +5,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/odvcencio/gosx"
+	"m31labs.dev/gosx"
 )
 
 type RenderOptions struct {

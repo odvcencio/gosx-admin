@@ -3,7 +3,7 @@ package collab
 import (
 	"testing"
 
-	"github.com/odvcencio/gosx-admin/blockstudio"
+	"m31labs.dev/gosx-admin/blockstudio"
 )
 
 func TestConcurrentMovesAreDeterministic(t *testing.T) {

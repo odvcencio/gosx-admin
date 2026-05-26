@@ -1,11 +1,11 @@
-module github.com/odvcencio/gosx-admin
+module m31labs.dev/gosx-admin
 
 go 1.26
 
 require (
 	github.com/klauspost/cpuid/v2 v2.0.9 // indirect
 	github.com/odvcencio/corkscrewdb v0.2.0 // indirect
-	github.com/odvcencio/gosx v0.18.28 // indirect
+	m31labs.dev/gosx v0.18.28 // indirect
 	github.com/odvcencio/gotreesitter v0.15.3 // indirect
 	github.com/odvcencio/manta v0.0.13 // indirect
 	github.com/odvcencio/mll v0.0.1 // indirect
