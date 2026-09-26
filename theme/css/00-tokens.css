@@ -1,0 +1,27 @@
+/* Default token values. A consumer :root rule overrides any of them.
+   This is the only file that may contain color literals. */
+:where(:root) {
+  --gxa-color-ink: #1f2328;
+  --gxa-color-muted: #59636e;
+  --gxa-color-paper: #f6f8fa;
+  --gxa-color-panel: #ffffff;
+  --gxa-color-line: #d1d9e0;
+  --gxa-color-control: #6e7781;
+  --gxa-color-accent: #0b5394;
+  --gxa-color-accent-ink: #ffffff;
+  --gxa-color-focus: #b3261e;
+  --gxa-color-danger: #b42318;
+  --gxa-color-success: #1a7f37;
+  --gxa-color-badge: #b42318;
+  --gxa-color-badge-ink: #ffffff;
+  --gxa-color-cue-heading: #ddf4ff;
+  --gxa-color-cue-link: #fff8c5;
+  --gxa-color-cue-code: #eff2f5;
+  --gxa-font-body: system-ui, sans-serif;
+  --gxa-font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+  --gxa-radius: 0.375rem;
+  --gxa-space: 1rem;
+  --gxa-target: 44px;
+  --gxa-focus-width: 3px;
+  --gxa-max-width: 78rem;
+}

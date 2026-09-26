@@ -1,0 +1,65 @@
+/* Shared rules for every gosx-admin surface. Selectors use :where() so a
+   consumer rule with any specificity wins. No color literals here. */
+
+:where(.gxa-root, .gxa-root *, .gxa-page, .gxa-page *),
+:where(.gxa-root, .gxa-page) :where(*::before, *::after) {
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+:where(.gxa-root) {
+  font-family: var(--gxa-font-body);
+  color: var(--gxa-color-ink);
+  background: var(--gxa-color-paper);
+  line-height: 1.5;
+}
+
+:where(.gxa-root, .gxa-page) :where(p, li, dd, dt, td, th, h1, h2, h3, h4, label, legend, a) {
+  overflow-wrap: anywhere;
+}
+
+/* Focus: visible everywhere, never removed without a replacement. */
+:where(.gxa-root, .gxa-page) :focus-visible {
+  outline: var(--gxa-focus-width) solid var(--gxa-color-focus);
+  outline-offset: 2px;
+}
+
+/* Targets: every control is at least --gxa-target tall. Text links inside
+   prose are exempt (WCAG 2.5.8). */
+:where(.gxa-root, .gxa-page) :where(button, select, summary, input:not([type="checkbox"], [type="radio"], [type="hidden"]), .gxa-button, .gxa-nav a, .gxa-phonebar a),
+.gosx-toast__dismiss {
+  min-height: var(--gxa-target);
+}
+
+:where(.gxa-root, .gxa-page) :where(.gxa-button--icon, .gosx-toast__dismiss) {
+  min-width: var(--gxa-target);
+}
+
+:where(.gxa-root, .gxa-page) :where(input[type="checkbox"], input[type="radio"]) {
+  inline-size: 1.25rem;
+  block-size: 1.25rem;
+}
+
+/* Visually hidden, still read by screen readers. */
+.gxa-visually-hidden {
+  position: absolute !important;
+  inline-size: 1px !important;
+  block-size: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  clip-path: inset(50%) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :where(.gxa-root, .gxa-page) *,
+  :where(.gxa-root, .gxa-page) *::before,
+  :where(.gxa-root, .gxa-page) *::after {
+    transition: none !important;
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
+}
