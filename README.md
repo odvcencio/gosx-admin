@@ -26,5 +26,5 @@ Current package surface:
   a memory-backed scheduling store for early sites and tests.
 
 ```sh
-go get github.com/odvcencio/gosx-admin
+go get m31labs.dev/gosx-admin
 ```
