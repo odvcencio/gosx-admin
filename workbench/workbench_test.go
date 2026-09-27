@@ -18,11 +18,11 @@ func TestViewMapsResourcesAndTools(t *testing.T) {
 				{Name: "title", Label: "Title", Kind: FieldText},
 			},
 			Fields: []Field{
-				{Name: "title", Label: "Title", Kind: FieldText, Required: true},
+				{Name: "title", Label: "Title", Kind: FieldText, Required: true, Help: "A short title.", MaxLength: 120},
 				{Name: "status", Label: "Status", Kind: FieldSelect, Options: []string{"draft", "published"}},
 			},
 			Actions: []Action{
-				{Name: "save", Label: "Save", Kind: "form"},
+				{Name: "save", Label: "Save", Kind: "form", Confirm: true},
 			},
 		}},
 		Tools: []Tool{{
@@ -42,12 +42,16 @@ func TestViewMapsResourcesAndTools(t *testing.T) {
 		t.Fatalf("unexpected resource labels: %#v", resource)
 	}
 	fields := resource["fields"].([]map[string]any)
-	if fields[0]["requiredLabel"] != "Required" || fields[1]["hasOptions"] != true {
+	if fields[0]["requiredLabel"] != "Required" || fields[0]["help"] != "A short title." || fields[0]["maxLength"] != 120 || fields[1]["hasOptions"] != true {
 		t.Fatalf("unexpected field views: %#v", fields)
 	}
 	tools := view["tools"].([]map[string]any)
 	if len(tools) != 1 || tools[0]["hasActions"] != false {
 		t.Fatalf("unexpected tool views: %#v", tools)
+	}
+	actions := resource["actions"].([]map[string]any)
+	if actions[0]["confirm"] != true {
+		t.Fatalf("unexpected action views: %#v", actions)
 	}
 }
 
