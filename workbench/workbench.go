@@ -21,6 +21,12 @@ type Field struct {
 	Required bool
 	ReadOnly bool
 	Options  []string
+	// Help is one sentence shown under the label. Renderers link it to the
+	// control with aria-describedby.
+	Help string
+	// MaxLength is the largest number of characters (Unicode code points)
+	// the field accepts. Zero means no limit.
+	MaxLength int
 }
 
 type Column struct {
@@ -34,6 +40,11 @@ type Action struct {
 	Label       string
 	Description string
 	Kind        string
+	// Confirm marks an action whose effects the operator must confirm before
+	// it runs, for example one that changes money, capacity, a published
+	// schedule, or a recipient list. workbench/render renders a confirmation
+	// step for it, and render.Guard rejects a request that skips the step.
+	Confirm bool
 }
 
 type Resource struct {

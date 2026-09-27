@@ -61,6 +61,8 @@ func FieldViews(fields []Field) []map[string]any {
 			"requiredLabel": requiredLabel(field.Required),
 			"readOnly":      field.ReadOnly,
 			"readOnlyLabel": readOnlyLabel(field.ReadOnly),
+			"help":          field.Help,
+			"maxLength":     field.MaxLength,
 			"options":       StringsView(field.Options),
 			"hasOptions":    len(field.Options) > 0,
 		})
@@ -88,6 +90,7 @@ func ActionViews(actions []Action) []map[string]any {
 			"label":       action.Label,
 			"description": action.Description,
 			"kind":        action.Kind,
+			"confirm":     action.Confirm,
 		})
 	}
 	return out
